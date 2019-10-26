@@ -1,6 +1,6 @@
 module.exports = {
   publicPath: process.env.NODE_ENV === 'production'
-    ? '/victor-mono/'
+    ? '/swimming-stats/'
     : '/',
   devServer: {
     compress: true,
