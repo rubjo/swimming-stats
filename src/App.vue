@@ -13,7 +13,7 @@ body {
   background: #eee;
 }
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: sans-serif;
   text-align: center;
   color: #2c3e50;
 }
