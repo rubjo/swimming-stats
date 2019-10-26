@@ -1,0 +1,206 @@
+<template>
+  <div>
+    <el-row :gutter="30">
+      <el-col :span="8">
+        <el-select
+          v-model="selectedSwimmers"
+          multiple
+          placeholder="Alle svømmere"
+        >
+          <el-option
+            v-for="swimmer in swimmers"
+            :key="swimmer.id"
+            :label="swimmer.name"
+            :value="swimmer.id"
+          >
+          </el-option>
+        </el-select>
+      </el-col>
+      <el-col :span="10">
+        <el-select
+          v-model="selectedDisciplines"
+          multiple
+          placeholder="Alle disipliner"
+        >
+          <el-option
+            v-for="discipline in disciplines"
+            :key="discipline"
+            :label="discipline"
+            :value="discipline"
+          >
+          </el-option>
+        </el-select>
+      </el-col>
+      <el-col :span="6">
+        <el-switch
+          v-model="viewMode"
+          active-color="#0bf"
+          inactive-color="#0bf"
+          active-text="Etter dato"
+          inactive-text="Etter alder"
+        >
+        </el-switch>
+      </el-col>
+    </el-row>
+    <div
+      ref="chart"
+      id="chart"
+    ></div>
+    <div id="tooltip"></div>
+  </div>
+</template>
+<script>
+import 'vega'
+import vegaEmbed from 'vega-embed'
+import byDateSpec from '@/specs/byDate.js'
+import byAgeSpec from '@/specs/byAge.js'
+import { swimmers, results } from '@/data/mainStats.js'
+
+function tooltipHandler (handler, event, item, value) {
+  const tooltip = document.querySelector('#tooltip')
+
+  if (value) {
+    tooltip.innerHTML =
+      `
+      <div>
+        <strong class="pull-left">${value.swimmerName}</strong>
+        <span class="small pull-right margin-left">${value.humanizedSwimmerAge}</span>
+      </div><br>
+      <div class="small">
+        ${value.competitionName}, ${value.venueName}
+      </div>
+      <div class="small">
+        ${value.competitionDate.format('LL')}
+      </div>
+      <div>
+        <span class="pull-left">${value.discipline}</span>
+        <strong class="pull-right margin-left">${value.humanizedTime}</strong>
+      </div>
+    `
+
+    tooltip.style.left = item.x + 'px'
+    tooltip.style.top = item.y + 'px'
+    tooltip.classList.add('visible')
+  } else {
+    tooltip.classList.remove('visible')
+  }
+}
+
+export default {
+  name: 'Graph',
+  data () {
+    return {
+      selectedSwimmers: [],
+      swimmers,
+      selectedDisciplines: [],
+      disciplines: results.reduce((acc, result) => {
+        if (!acc.includes(result.discipline)) acc.push(result.discipline)
+        return acc
+      }, []),
+      viewMode: true
+    }
+  },
+  watch: {
+    selectedSwimmers (newVal, oldVal) {
+      this.destroyChart()
+      this.renderChart()
+    },
+    selectedDisciplines (newVal, oldVal) {
+      this.destroyChart()
+      this.renderChart()
+    },
+    viewMode (newVal, oldVal) {
+      this.destroyChart()
+      this.renderChart()
+    }
+  },
+  computed: {
+    filteredSpec () {
+      const spec = Object.assign({}, this.viewMode ? byDateSpec : byAgeSpec)
+
+      const filtered = []
+
+      if (this.selectedSwimmers.length || this.selectedDisciplines.length) {
+        spec.data.forEach(data => {
+          data.values.forEach(entry => {
+            const swimmerIsSelected = !this.selectedSwimmers.length ||
+              this.selectedSwimmers.includes(entry.swimmerId)
+            const disciplineIsSelected = !this.selectedDisciplines.length ||
+              this.selectedDisciplines.includes(entry.discipline)
+
+            if (swimmerIsSelected && disciplineIsSelected) {
+              filtered.push(entry)
+            }
+          })
+        })
+      }
+
+      if (filtered.length) spec.data = { name: 'stats', values: filtered }
+
+      return spec
+    }
+  },
+  mounted () {
+    window.graph = this
+
+    this.disciplines.sort((a, b) => {
+      const distanceA = parseInt(a.substr(0, a.indexOf('m')))
+      const distanceB = parseInt(b.substr(0, b.indexOf('m')))
+      return distanceA < distanceB
+        ? -1
+        : distanceA > distanceB
+          ? 1
+          : 0
+    })
+
+    this.renderChart()
+  },
+  methods: {
+    renderChart () {
+      vegaEmbed('#chart', this.filteredSpec, {
+        tooltip: tooltipHandler
+      }).then(result => {
+        this.chart = result.view
+        window.chart = this.chart
+      }).catch(console.error)
+    },
+    destroyChart () {
+      this.chart.finalize()
+      this.$refs.chart.innerHTML = ''
+    },
+    selSwimmers () {
+      return [1]
+    }
+  }
+}
+
+</script>
+<style
+  scoped
+  lang="scss"
+>
+
+.el-select {
+  width: 100%;
+}
+
+#tooltip {
+  position: absolute;
+  padding: 2px 6px;
+  background: #444;
+  color: #fff;
+  border-radius: 4px;
+  opacity: 0.9;
+  transition: opacity 0.25s;
+
+  &:not(.visible) {
+    opacity: 0;
+    transition-delay: 0.5s;
+  }
+}
+
+#chart {
+  background: #fff;
+  padding: 15px;
+}
+</style>
