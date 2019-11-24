@@ -1,4 +1,4 @@
-import { swimmers, venues, competitions, results } from '@/data/mainStats.js'
+import { records, swimmers, venues, competitions, results } from '@/data/mainStats.js'
 import moment from 'moment'
 import nb from '@/nb.js'
 
@@ -24,23 +24,39 @@ const graphData = results.map(result => {
   // Convert any duration to only seconds
   const time = moment.duration('0:' + result.time).asSeconds()
 
+  // Calculate points
+  function fina (swimTime, recordTime) {
+    return Math.floor(1000 * Math.pow(recordTime / swimTime, 3))
+  }
+
+  const record = records.disciplines.find(d => d.name === result.discipline)
+  let points
+  if (record) {
+    const recordAsSeconds = moment.duration('0:' + record.time).asSeconds()
+    points = fina(time, recordAsSeconds)
+  } else {
+    points = 0
+  }
+
   return {
     competitionName: competition.name,
     competitionDate: moment(competition.date, 'DD.MM.YYYY'),
     swimmerId: swimmer.id,
     swimmerName: swimmer.name,
+    colour: swimmer.colour,
     swimmerAge,
     humanizedSwimmerAge,
     venueName: venue.name,
     venueLength: venue.length,
     discipline: result.discipline,
     time,
+    points,
     humanizedTime
   }
 })
 
 const width = window.innerWidth - 200
-const height = window.innerHeight - 200
+const height = window.innerHeight - 260
 const miniMapHeight = 50
 const margin = 50
 const detailHeight = height - miniMapHeight - margin - margin
@@ -54,13 +70,6 @@ export default {
     'axis': {
       'labelFontSize': 14,
       'titleFontSize': 16
-    },
-    'range': {
-      'category': [
-        '#29f', // Michael
-        '#ef8e3b', // Daniel
-        '#0b0' // Victor
-      ]
     }
   },
   'data': [
@@ -107,12 +116,6 @@ export default {
           'domain': { 'data': 'stats', 'field': 'time' },
           'nice': true,
           'zero': false
-        },
-        {
-          'name': 'color',
-          'type': 'ordinal',
-          'range': 'category',
-          'domain': { 'data': 'stats', 'field': 'swimmerName' }
         }
       ],
       'axes': [
@@ -149,7 +152,7 @@ export default {
                       'x': { 'scale': 'xDetail', 'field': 'competitionDate' },
                       'y': { 'scale': 'yDetail', 'field': 'time' },
                       'strokeWidth': { 'value': 5 },
-                      'stroke': { 'scale': 'color', 'field': 'swimmerName' }
+                      'stroke': { 'field': 'colour' }
                     }
                   }
                 },
@@ -162,9 +165,9 @@ export default {
                       'x': { 'scale': 'xDetail', 'field': 'competitionDate' },
                       'y': { 'scale': 'yDetail', 'field': 'time' },
                       'size': { 'value': 200 },
-                      'fill': { 'scale': 'color', 'field': 'swimmerName' },
+                      'fill': { 'field': 'colour' },
                       'stroke': { 'value': '#fff' },
-                      'strokeWidth': { 'value': 2.5 },
+                      'strokeWidth': { 'value': 2 },
                       'tooltip': { 'signal': 'datum' },
                       'zindex': 99
                     }
@@ -252,12 +255,6 @@ export default {
           'domain': { 'data': 'stats', 'field': 'time' },
           'nice': true,
           'zero': false
-        },
-        {
-          'name': 'color',
-          'type': 'ordinal',
-          'range': 'category',
-          'domain': { 'data': 'stats', 'field': 'swimmerName' }
         }
       ],
       'axes': [
@@ -293,7 +290,7 @@ export default {
                       'interpolate': { 'value': 'monotone' },
                       'x': { 'scale': 'xOverview', 'field': 'competitionDate' },
                       'y': { 'scale': 'yOverview', 'field': 'time' },
-                      'stroke': { 'scale': 'color', 'field': 'swimmerName' }
+                      'stroke': { 'field': 'colour' }
                     }
                   }
                 },

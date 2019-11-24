@@ -1,7 +1,7 @@
 <template>
   <div>
-    <el-row :gutter="30">
-      <el-col :span="8">
+    <el-row :gutter="20">
+      <el-col :span="10" :offset="1">
         <el-select
           v-model="selectedSwimmers"
           multiple
@@ -16,7 +16,29 @@
           </el-option>
         </el-select>
       </el-col>
-      <el-col :span="10">
+      <el-col :span="6">
+        <el-switch
+          v-model="xMode"
+          active-color="#0bf"
+          inactive-color="#0bf"
+          active-text="Etter dato"
+          inactive-text="Etter alder"
+        >
+        </el-switch>
+      </el-col>
+      <el-col :span="6">
+        <el-switch
+          v-model="yMode"
+          active-color="#0bf"
+          inactive-color="#0bf"
+          active-text="Vis tid"
+          inactive-text="Vis poeng (FINA 2019)"
+        >
+        </el-switch>
+      </el-col>
+    </el-row>
+    <el-row :gutter="20">
+      <el-col :span="22" :offset="1">
         <el-select
           v-model="selectedDisciplines"
           multiple
@@ -31,16 +53,6 @@
           </el-option>
         </el-select>
       </el-col>
-      <el-col :span="6">
-        <el-switch
-          v-model="viewMode"
-          active-color="#0bf"
-          inactive-color="#0bf"
-          active-text="Etter dato"
-          inactive-text="Etter alder"
-        >
-        </el-switch>
-      </el-col>
     </el-row>
     <div
       ref="chart"
@@ -52,8 +64,10 @@
 <script>
 import 'vega'
 import vegaEmbed from 'vega-embed'
-import byDateSpec from '@/specs/byDate.js'
-import byAgeSpec from '@/specs/byAge.js'
+import timeByDateSpec from '@/specs/timeByDate.js'
+import timeByAgeSpec from '@/specs/timeByAge.js'
+import pointsByDateSpec from '@/specs/pointsByDate.js'
+import pointsByAgeSpec from '@/specs/pointsByAge.js'
 import { swimmers, results } from '@/data/mainStats.js'
 
 function tooltipHandler (handler, event, item, value) {
@@ -62,10 +76,6 @@ function tooltipHandler (handler, event, item, value) {
   if (value) {
     tooltip.innerHTML =
       `
-      <div>
-        <strong class="pull-left">${value.swimmerName}</strong>
-        <span class="small pull-right margin-left">${value.humanizedSwimmerAge}</span>
-      </div><br>
       <div class="small">
         ${value.competitionName}, ${value.venueName}
       </div>
@@ -73,8 +83,16 @@ function tooltipHandler (handler, event, item, value) {
         ${value.competitionDate.format('LL')}
       </div>
       <div>
+        <strong class="pull-left">${value.swimmerName}</strong>
+        <span class="small pull-right margin-left">${value.humanizedSwimmerAge}</span>
+      </div><br>
+      <div>
         <span class="pull-left">${value.discipline}</span>
-        <strong class="pull-right margin-left">${value.humanizedTime}</strong>
+        <strong class="pull-right text-right margin-left">${value.humanizedTime}</strong>
+      </div><br>
+      <div>
+        <span class="small pull-left">WR: ${value.humanizedRecordTime}</span>
+        <strong class="pull-right margin-left">${value.points}p</strong>
       </div>
     `
 
@@ -97,7 +115,8 @@ export default {
         if (!acc.includes(result.discipline)) acc.push(result.discipline)
         return acc
       }, []),
-      viewMode: true
+      xMode: true,
+      yMode: true
     }
   },
   watch: {
@@ -109,14 +128,25 @@ export default {
       this.destroyChart()
       this.renderChart()
     },
-    viewMode (newVal, oldVal) {
+    xMode (newVal, oldVal) {
+      this.destroyChart()
+      this.renderChart()
+    },
+    yMode (newVal, oldVal) {
       this.destroyChart()
       this.renderChart()
     }
   },
   computed: {
     filteredSpec () {
-      const spec = Object.assign({}, this.viewMode ? byDateSpec : byAgeSpec)
+      let spec
+      if (this.xMode) {
+        if (this.yMode) spec = Object.assign({}, timeByDateSpec)
+        else spec = Object.assign({}, pointsByDateSpec)
+      } else {
+        if (this.yMode) spec = Object.assign({}, timeByAgeSpec)
+        else spec = Object.assign({}, pointsByAgeSpec)
+      }
 
       const filtered = []
 
@@ -189,6 +219,7 @@ export default {
   padding: 2px 6px;
   background: #444;
   color: #fff;
+  margin-top: 50px;
   border-radius: 4px;
   opacity: 0.9;
   transition: opacity 0.25s;

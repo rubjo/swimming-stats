@@ -1,15 +1,16 @@
 const swimmers = [
-  { id: 1, name: 'Michael', born: '19.03.2009' },
-  { id: 2, name: 'Daniel', born: '20.05.2011' },
-  { id: 3, name: 'Victor', born: '11.03.2013' }
+  { id: 1, name: 'Michael', born: '19.03.2009', colour: '#34aeff' },
+  { id: 2, name: 'Daniel', born: '20.05.2011', colour: '#f5bf2b' },
+  { id: 3, name: 'Victor', born: '11.03.2013', colour: '#00cb10' }
 ]
 
 const venues = [
-  { id: 1, name: 'Farrishallen', length: 25 },
-  { id: 2, name: 'Horten svømmehall', length: 25 },
-  { id: 3, name: 'Sandefjord svømmehall', length: 25 },
-  { id: 4, name: 'Tønsberg svømmehall', length: 25 },
-  { id: 5, name: 'Sarpsborg svømmehall', length: 25 }
+  { id: 1, name: 'Farrishallen', poolLength: 25 },
+  { id: 2, name: 'Horten svømmehall', poolLength: 25 },
+  { id: 3, name: 'Sandefjord svømmehall', poolLength: 25 },
+  { id: 4, name: 'Tønsberg svømmehall', poolLength: 25 },
+  { id: 5, name: 'Sarpsborg svømmehall', poolLength: 25 },
+  { id: 6, name: 'Gulsethallen (Skien)', poolLength: 25 }
 ]
 
 const competitions = [
@@ -23,7 +24,10 @@ const competitions = [
   { id: 8, venue: 2, date: '21.09.2019', name: 'Rekruttstevne' },
   { id: 9, venue: 2, date: '21.09.2019', name: 'Horten Open' },
   { id: 10, venue: 5, date: '13.10.2019', name: 'Olavslekene' },
-  { id: 11, venue: 1, date: '20.10.2019', name: 'Farrisrekrutten' }
+  { id: 11, venue: 1, date: '20.10.2019', name: 'Farrisrekrutten' },
+  { id: 12, venue: 3, date: '02.11.2019', name: 'Rekruttstevne' },
+  { id: 13, venue: 3, date: '23.11.2019', name: 'Fjordsvøm 2019' },
+  { id: 14, venue: 6, date: '24.11.2019', name: 'Rekruttstevne' }
 ]
 
 const results = [
@@ -84,6 +88,11 @@ const results = [
   { swimmer: 1, competition: 10, discipline: '100m rygg', time: '1:37.87' },
   { swimmer: 1, competition: 10, discipline: '200m medley', time: '3:14.61' },
   { swimmer: 1, competition: 10, discipline: '400m fri', time: '6:15.20' },
+  { swimmer: 1, competition: 13, discipline: '50m bryst', time: '45.45' },
+  { swimmer: 1, competition: 13, discipline: '50m butterfly', time: '43.30' },
+  { swimmer: 1, competition: 13, discipline: '100m bryst', time: '1:41.05' },
+  { swimmer: 1, competition: 13, discipline: '100m rygg', time: '1:30.71' },
+  { swimmer: 1, competition: 13, discipline: '200m medley', time: '3:14.69' },
   //   8888b.     db    88b 88 88 888888 88
   //    8I  Yb   dPYb   88Yb88 88 88__   88
   //    8I  dY  dP__Yb  88 Y88 88 88""   88  .o
@@ -122,6 +131,20 @@ const results = [
   { swimmer: 2, competition: 11, discipline: '50m fri', time: '46.62' },
   { swimmer: 2, competition: 11, discipline: '50m bryst', time: '1:13.00' },
   { swimmer: 2, competition: 11, discipline: '100m fri', time: '1:48.00' },
+  { swimmer: 2, competition: 12, discipline: '25m fri', time: '20.48' },
+  { swimmer: 2, competition: 12, discipline: '25m bryst', time: '32.62' },
+  { swimmer: 2, competition: 12, discipline: '25m butterfly', time: '24.42' },
+  { swimmer: 2, competition: 12, discipline: '25m rygg', time: '29.23' },
+  { swimmer: 2, competition: 12, discipline: '50m fri', time: '54.13' },
+  { swimmer: 2, competition: 12, discipline: '50m bryst', time: '1:13.63' },
+  { swimmer: 2, competition: 12, discipline: '100m fri', time: '1:48.46' },
+  { swimmer: 2, competition: 14, discipline: '25m fri', time: '19.10' },
+  { swimmer: 2, competition: 14, discipline: '25m bryst', time: '28.94' },
+  { swimmer: 2, competition: 14, discipline: '25m butterfly', time: '24.13' },
+  { swimmer: 2, competition: 14, discipline: '25m rygg', time: '26.82' },
+  { swimmer: 2, competition: 14, discipline: '50m fri', time: '44.52' },
+  { swimmer: 2, competition: 14, discipline: '50m bryst', time: '1:08.02' },
+  { swimmer: 2, competition: 14, discipline: '50m butterfly', time: '1:05.44' },
   //   Yb    dP 88  dP""b8 888888  dP"Yb  88""Yb
   //    Yb  dP  88 dP   `"   88   dP   Yb 88__dP
   //     YbdP   88 Yb        88   Yb   dP 88"Yb
