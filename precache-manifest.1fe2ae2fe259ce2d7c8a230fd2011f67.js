@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "f7fbd945c1caab8c70fb",
-    "url": "/swimming-stats/js/about.841ab8c9.js"
+    "revision": "df90663f5a9eb0cce1ab",
+    "url": "/swimming-stats/js/about.35c0afbe.js"
   },
   {
-    "revision": "9f113d3640ffc91ed39e",
+    "revision": "c0fb560a8ca163f43e7e",
     "url": "/swimming-stats/css/app.0f2b6c82.css"
   },
   {
-    "revision": "9f113d3640ffc91ed39e",
-    "url": "/swimming-stats/js/app.88bcd744.js"
+    "revision": "c0fb560a8ca163f43e7e",
+    "url": "/swimming-stats/js/app.04223d56.js"
   },
   {
     "revision": "da2c9e33a81a422067ec",
@@ -28,7 +28,7 @@ self.__precacheManifest = [
     "url": "/swimming-stats/fonts/element-icons.732389de.ttf"
   },
   {
-    "revision": "24f1f57064932141b1c98eef913c2523",
+    "revision": "20647e42689065ff38c858d6b88d455f",
     "url": "/swimming-stats/index.html"
   },
   {

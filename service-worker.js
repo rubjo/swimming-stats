@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/swimming-stats/precache-manifest.7d241f3926d88ee55a4b54040b10bd3f.js"
+  "/swimming-stats/precache-manifest.1fe2ae2fe259ce2d7c8a230fd2011f67.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "swimming-stats"});
