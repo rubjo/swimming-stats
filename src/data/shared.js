@@ -6,8 +6,8 @@ import nb from '@/nb.js'
 moment.locale('nb-no', nb)
 moment.locale('nb-no')
 
-const width = window.innerWidth - 200
-const height = window.innerHeight - 260
+const width = window.innerWidth - 150
+const height = window.innerHeight - 210
 const miniMapHeight = 50
 const margin = 50
 const detailHeight = height - miniMapHeight - margin - margin

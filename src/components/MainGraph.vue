@@ -1,7 +1,7 @@
 <template>
   <div>
-    <el-row :gutter="20">
-      <el-col :span="10" :offset="1">
+    <el-row :gutter="10">
+      <el-col :span="12" :offset="0">
         <el-select
           v-model="selectedSwimmers"
           multiple
@@ -37,8 +37,9 @@
         </el-switch>
       </el-col>
     </el-row>
-    <el-row :gutter="20">
-      <el-col :span="22" :offset="1">
+    <br>
+    <el-row :gutter="10">
+      <el-col :span="24" :offset="0">
         <el-select
           v-model="selectedDisciplines"
           multiple
@@ -54,6 +55,7 @@
         </el-select>
       </el-col>
     </el-row>
+    <br>
     <div
       ref="chart"
       id="chart"

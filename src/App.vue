@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <div id="nav">
+  <!--     <div id="nav">
       <router-link to="/">Hjem</router-link> |
       <router-link to="/about">Om</router-link>
-    </div>
+    </div> -->
     <router-view/>
   </div>
 </template>
@@ -16,6 +16,7 @@ body {
   font-family: sans-serif;
   text-align: center;
   color: #2c3e50;
+  padding: 15px;
 }
 #nav {
   padding: 30px;

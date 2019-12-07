@@ -1,6 +1,6 @@
 const swimmers = [
   { id: 1, name: 'Michael', born: '19.03.2009', colour: '#34aeff' },
-  { id: 2, name: 'Daniel', born: '20.05.2011', colour: '#f5bf2b' },
+  { id: 2, name: 'Daniel', born: '20.05.2011', colour: '#ffbf2b' },
   { id: 3, name: 'Victor', born: '11.03.2013', colour: '#00cb10' }
 ]
 
@@ -27,7 +27,8 @@ const competitions = [
   { id: 11, venue: 1, date: '20.10.2019', name: 'Farrisrekrutten' },
   { id: 12, venue: 3, date: '02.11.2019', name: 'Rekruttstevne' },
   { id: 13, venue: 3, date: '23.11.2019', name: 'Fjordsvøm 2019' },
-  { id: 14, venue: 6, date: '24.11.2019', name: 'Rekruttstevne' }
+  { id: 14, venue: 6, date: '24.11.2019', name: 'Rekruttstevne' },
+  { id: 15, venue: 4, date: '07.12.2019', name: 'Rekruttstevne' }
 ]
 
 const results = [
@@ -145,6 +146,12 @@ const results = [
   { swimmer: 2, competition: 14, discipline: '50m fri', time: '44.52' },
   { swimmer: 2, competition: 14, discipline: '50m bryst', time: '1:08.02' },
   { swimmer: 2, competition: 14, discipline: '50m butterfly', time: '1:05.44' },
+  { swimmer: 2, competition: 15, discipline: '25m fri', time: '18.72' },
+  { swimmer: 2, competition: 15, discipline: '25m bryst', time: '28.99' },
+  { swimmer: 2, competition: 15, discipline: '25m butterfly', time: '22.28' },
+  { swimmer: 2, competition: 15, discipline: '25m rygg', time: '25.94' },
+  { swimmer: 2, competition: 15, discipline: '50m fri', time: '45.63' },
+  { swimmer: 2, competition: 15, discipline: '50m bryst', time: '1:00.34' },
   //   Yb    dP 88  dP""b8 888888  dP"Yb  88""Yb
   //    Yb  dP  88 dP   `"   88   dP   Yb 88__dP
   //     YbdP   88 Yb        88   Yb   dP 88"Yb
