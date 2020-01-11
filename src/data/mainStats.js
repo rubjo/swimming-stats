@@ -28,7 +28,8 @@ const competitions = [
   { id: 12, venue: 3, date: '02.11.2019', name: 'Rekruttstevne' },
   { id: 13, venue: 3, date: '23.11.2019', name: 'Fjordsvøm 2019' },
   { id: 14, venue: 6, date: '24.11.2019', name: 'Rekruttstevne' },
-  { id: 15, venue: 4, date: '07.12.2019', name: 'Rekruttstevne' }
+  { id: 15, venue: 4, date: '07.12.2019', name: 'Rekruttstevne' },
+  { id: 16, venue: 3, date: '11.01.2020', name: 'Rekruttstevne' }
 ]
 
 const results = [
@@ -152,6 +153,14 @@ const results = [
   { swimmer: 2, competition: 15, discipline: '25m rygg', time: '25.94' },
   { swimmer: 2, competition: 15, discipline: '50m fri', time: '45.63' },
   { swimmer: 2, competition: 15, discipline: '50m bryst', time: '1:00.34' },
+  { swimmer: 2, competition: 16, discipline: '50m bryst', time: '1:04.89' },
+  { swimmer: 2, competition: 16, discipline: '100m medley', time: '2:03.10' },
+  { swimmer: 2, competition: 16, discipline: '25m fri', time: '19.58' },
+  { swimmer: 2, competition: 16, discipline: '25m bryst', time: '29.34' },
+  { swimmer: 2, competition: 16, discipline: '25m butterfly', time: '20.45' },
+  { swimmer: 2, competition: 16, discipline: '25m rygg', time: '24.80' },
+  { swimmer: 2, competition: 16, discipline: '50m fri', time: '48.74' },
+  { swimmer: 2, competition: 16, discipline: '100m fri', time: '1:44.50' },
   //   Yb    dP 88  dP""b8 888888  dP"Yb  88""Yb
   //    Yb  dP  88 dP   `"   88   dP   Yb 88__dP
   //     YbdP   88 Yb        88   Yb   dP 88"Yb
