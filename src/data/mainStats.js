@@ -10,7 +10,8 @@ const venues = [
   { id: 3, name: 'Sandefjord svømmehall', poolLength: 25 },
   { id: 4, name: 'Tønsberg svømmehall', poolLength: 25 },
   { id: 5, name: 'Sarpsborg svømmehall', poolLength: 25 },
-  { id: 6, name: 'Gulsethallen (Skien)', poolLength: 25 }
+  { id: 6, name: 'Gulsethallen (Skien)', poolLength: 25 },
+  { id: 7, name: 'Kjølneshallen', poolLength: 25 }
 ]
 
 const competitions = [
@@ -29,7 +30,8 @@ const competitions = [
   { id: 13, venue: 3, date: '23.11.2019', name: 'Fjordsvøm 2019' },
   { id: 14, venue: 6, date: '24.11.2019', name: 'Rekruttstevne' },
   { id: 15, venue: 4, date: '07.12.2019', name: 'Rekruttstevne' },
-  { id: 16, venue: 3, date: '11.01.2020', name: 'Rekruttstevne' }
+  { id: 16, venue: 3, date: '11.01.2020', name: 'Rekruttstevne' },
+  { id: 17, venue: 7, date: '18.01.2020', name: 'Poseidon Jaked Cup' }
 ]
 
 const results = [
@@ -95,6 +97,11 @@ const results = [
   { swimmer: 1, competition: 13, discipline: '100m bryst', time: '1:41.05' },
   { swimmer: 1, competition: 13, discipline: '100m rygg', time: '1:30.71' },
   { swimmer: 1, competition: 13, discipline: '200m medley', time: '3:14.69' },
+  { swimmer: 1, competition: 17, discipline: '50m bryst', time: '44.04' },
+  { swimmer: 1, competition: 17, discipline: '50m butterfly', time: '40.31' },
+  { swimmer: 1, competition: 17, discipline: '50m fri', time: '32.88' },
+  { swimmer: 1, competition: 17, discipline: '100m rygg', time: '1:27.93' },
+  { swimmer: 1, competition: 17, discipline: '400m fri', time: '5:59.98' },
   //   8888b.     db    88b 88 88 888888 88
   //    8I  Yb   dPYb   88Yb88 88 88__   88
   //    8I  dY  dP__Yb  88 Y88 88 88""   88  .o
