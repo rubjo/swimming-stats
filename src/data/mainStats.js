@@ -31,7 +31,8 @@ const competitions = [
   { id: 14, venue: 6, date: '24.11.2019', name: 'Rekruttstevne' },
   { id: 15, venue: 4, date: '07.12.2019', name: 'Rekruttstevne' },
   { id: 16, venue: 3, date: '11.01.2020', name: 'Rekruttstevne' },
-  { id: 17, venue: 7, date: '18.01.2020', name: 'Poseidon Jaked Cup' }
+  { id: 17, venue: 7, date: '18.01.2020', name: 'Poseidon Jaked Cup' },
+  { id: 18, venue: 7, date: '19.01.2020', name: 'Poseidon Jaked Cup' }
 ]
 
 const results = [
@@ -102,6 +103,8 @@ const results = [
   { swimmer: 1, competition: 17, discipline: '50m fri', time: '32.88' },
   { swimmer: 1, competition: 17, discipline: '100m rygg', time: '1:27.93' },
   { swimmer: 1, competition: 17, discipline: '400m fri', time: '5:59.98' },
+  { swimmer: 1, competition: 18, discipline: '200m medley', time: '3:02.34' },
+  { swimmer: 1, competition: 18, discipline: '100m fri', time: '1:15.88' },
   //   8888b.     db    88b 88 88 888888 88
   //    8I  Yb   dPYb   88Yb88 88 88__   88
   //    8I  dY  dP__Yb  88 Y88 88 88""   88  .o
