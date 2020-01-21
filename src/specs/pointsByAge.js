@@ -100,7 +100,7 @@ export default {
                       'interpolate': { 'value': 'monotone' },
                       'x': { 'scale': 'xDetail', 'field': 'swimmerAge' },
                       'y': { 'scale': 'yDetail', 'field': 'points' },
-                      'strokeWidth': { 'value': 3 },
+                      'strokeWidth': { 'value': 5 },
                       'stroke': { 'field': 'colour' }
                     }
                   }

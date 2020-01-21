@@ -157,8 +157,10 @@ export default {
           data.values.forEach(entry => {
             const swimmerIsSelected = this.selectedSwimmers.includes(entry.swimmerId)
             const disciplineIsSelected = this.selectedDisciplines.includes(entry.discipline)
-
-            if (swimmerIsSelected || disciplineIsSelected) {
+            const include = (swimmerIsSelected && disciplineIsSelected) ||
+              (swimmerIsSelected && !this.selectedDisciplines.length) ||
+              (disciplineIsSelected && !this.selectedSwimmers.length)
+            if (include) {
               filtered.push(entry)
             }
           })

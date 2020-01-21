@@ -90,7 +90,7 @@ export default {
                       'interpolate': { 'value': 'monotone' },
                       'x': { 'scale': 'xDetail', 'field': 'competitionDate' },
                       'y': { 'scale': 'yDetail', 'field': 'time' },
-                      'strokeWidth': { 'value': 3 },
+                      'strokeWidth': { 'value': 5 },
                       'stroke': { 'field': 'colour' }
                     }
                   }
