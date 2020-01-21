@@ -113,12 +113,16 @@ export default {
                       'shape': { 'value': 'circle' },
                       'x': { 'scale': 'xDetail', 'field': 'swimmerAge' },
                       'y': { 'scale': 'yDetail', 'field': 'time' },
-                      'size': { 'value': 200 },
+                      'size': { 'value': 25 },
                       'fill': { 'field': 'colour' },
-                      'stroke': { 'value': '#fff' },
-                      'strokeWidth': { 'value': 2 },
+                      'stroke': { 'field': 'colour' },
+                      'strokeWidth': { 'value': 5 },
                       'tooltip': { 'signal': 'datum' },
                       'zindex': 99
+                    },
+                    'hover': {
+                      'size': { 'value': 150 },
+                      'fill': { 'value': '#fff' }
                     }
                   }
                 }

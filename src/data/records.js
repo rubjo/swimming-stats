@@ -1,4 +1,4 @@
-// Men's worlds records (2019)
+// Men's world records (2019)
 
 export default {
   date: '24.11.2019',
@@ -22,6 +22,10 @@ export default {
     { poolLength: 50, name: '200m medley', time: '1:54.00' },
     { poolLength: 50, name: '400m medley', time: '4:03.84' },
     // Short course
+    { poolLength: 25, name: '25m fri', time: '10.13' }, // UNOFFICIAL (50m record / 2)
+    { poolLength: 25, name: '25m bryst', time: '12.63' }, // UNOFFICIAL (50m record / 2)
+    { poolLength: 25, name: '25m rygg', time: '11.11' }, // UNOFFICIAL (50m record / 2)
+    { poolLength: 25, name: '25m butterfly', time: '10.88' }, // UNOFFICIAL (50m record / 2)
     { poolLength: 25, name: '50m fri', time: '20.25' },
     { poolLength: 25, name: '50m bryst', time: '25.25' },
     { poolLength: 25, name: '50m rygg', time: '22.22' },

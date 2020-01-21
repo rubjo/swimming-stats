@@ -155,19 +155,17 @@ export default {
       if (this.selectedSwimmers.length || this.selectedDisciplines.length) {
         spec.data.forEach(data => {
           data.values.forEach(entry => {
-            const swimmerIsSelected = !this.selectedSwimmers.length ||
-              this.selectedSwimmers.includes(entry.swimmerId)
-            const disciplineIsSelected = !this.selectedDisciplines.length ||
-              this.selectedDisciplines.includes(entry.discipline)
+            const swimmerIsSelected = this.selectedSwimmers.includes(entry.swimmerId)
+            const disciplineIsSelected = this.selectedDisciplines.includes(entry.discipline)
 
-            if (swimmerIsSelected && disciplineIsSelected) {
+            if (swimmerIsSelected || disciplineIsSelected) {
               filtered.push(entry)
             }
           })
         })
       }
 
-      if (filtered.length) spec.data = { name: 'stats', values: filtered }
+      spec.data = { name: 'stats', values: filtered }
 
       return spec
     }
@@ -225,10 +223,11 @@ export default {
   border-radius: 4px;
   opacity: 0.9;
   transition: opacity 0.25s;
-
+  z-index: 9999;
   &:not(.visible) {
     opacity: 0;
-    transition-delay: 0.5s;
+    z-index: -1;
+    transition-delay: 0;
   }
 }
 
