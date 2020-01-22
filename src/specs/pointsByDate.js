@@ -90,7 +90,7 @@ export default {
                       'interpolate': { 'value': 'monotone' },
                       'x': { 'scale': 'xDetail', 'field': 'competitionDate' },
                       'y': { 'scale': 'yDetail', 'field': 'points' },
-                      'strokeWidth': { 'value': 5 },
+                      'strokeWidth': { 'value': 3 },
                       'stroke': { 'field': 'colour' }
                     }
                   }
@@ -106,12 +106,12 @@ export default {
                       'size': { 'value': 25 },
                       'fill': { 'field': 'colour' },
                       'stroke': { 'field': 'colour' },
-                      'strokeWidth': { 'value': 5 },
+                      'strokeWidth': { 'value': 3 },
                       'tooltip': { 'signal': 'datum' },
                       'zindex': 99
                     },
                     'hover': {
-                      'size': { 'value': 150 },
+                      'size': { 'value': 100 },
                       'fill': { 'value': '#fff' }
                     }
                   }
