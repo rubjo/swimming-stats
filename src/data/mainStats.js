@@ -424,7 +424,8 @@ const competitions = [
   { id: 342, venue: 50, date: '05.12.2019', name: 'Ukjent stevne' },
   { id: 343, venue: 50, date: '06.12.2019', name: 'Ukjent stevne' },
   { id: 344, venue: 50, date: '07.12.2019', name: 'Ukjent stevne' },
-  { id: 345, venue: 50, date: '08.12.2019', name: 'Ukjent stevne' }
+  { id: 345, venue: 50, date: '08.12.2019', name: 'Ukjent stevne' },
+  { id: 346, venue: 1, date: '01.02.2020', name: 'Rekruttstevne' }
 ]
 
 const results = [
@@ -556,6 +557,7 @@ const results = [
   { swimmer: 2, competition: 15, discipline: '50m fri', time: '45.63' },
   { swimmer: 2, competition: 15, discipline: '50m bryst', time: '1:00.34' },
   { swimmer: 2, competition: 16, discipline: '50m bryst', time: '1:04.89' },
+  { swimmer: 2, competition: 16, discipline: '50m rygg', time: '59.61' },
   { swimmer: 2, competition: 16, discipline: '100m medley', time: '2:03.10' },
   { swimmer: 2, competition: 16, discipline: '25m fri', time: '19.58' },
   { swimmer: 2, competition: 16, discipline: '25m bryst', time: '29.34' },
@@ -563,6 +565,14 @@ const results = [
   { swimmer: 2, competition: 16, discipline: '25m rygg', time: '24.80' },
   { swimmer: 2, competition: 16, discipline: '50m fri', time: '48.74' },
   { swimmer: 2, competition: 16, discipline: '100m fri', time: '1:44.50' },
+  { swimmer: 2, competition: 346, discipline: '25m fri', time: '19.25' },
+  { swimmer: 2, competition: 346, discipline: '25m bryst', time: '27.04' },
+  { swimmer: 2, competition: 346, discipline: '25m butterfly', time: '19.84' },
+  { swimmer: 2, competition: 346, discipline: '25m rygg', time: '24.64' },
+  { swimmer: 2, competition: 346, discipline: '50m fri', time: '43.18' },
+  { swimmer: 2, competition: 346, discipline: '50m bryst', time: '1:02.48' },
+  { swimmer: 2, competition: 346, discipline: '50m rygg', time: '55.32' },
+  { swimmer: 2, competition: 346, discipline: '100m fri', time: '1:42.24' },
   //   Yb    dP 88  dP""b8 888888  dP"Yb  88""Yb
   //    Yb  dP  88 dP   `"   88   dP   Yb 88__dP
   //     YbdP   88 Yb        88   Yb   dP 88"Yb
