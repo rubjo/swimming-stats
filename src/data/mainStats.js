@@ -425,7 +425,9 @@ const competitions = [
   { id: 343, venue: 50, date: '06.12.2019', name: 'Ukjent stevne' },
   { id: 344, venue: 50, date: '07.12.2019', name: 'Ukjent stevne' },
   { id: 345, venue: 50, date: '08.12.2019', name: 'Ukjent stevne' },
-  { id: 346, venue: 1, date: '01.02.2020', name: 'Rekruttstevne' }
+  { id: 346, venue: 1, date: '01.02.2020', name: 'Rekruttstevne' },
+  { id: 347, venue: 47, date: '08.02.2020', name: 'Asker Open (dag 2)' },
+  { id: 348, venue: 47, date: '08.02.2020', name: 'Asker Open (dag 3)' }
 ]
 
 const results = [
@@ -498,6 +500,12 @@ const results = [
   { swimmer: 1, competition: 17, discipline: '400m fri', time: '5:59.98' },
   { swimmer: 1, competition: 18, discipline: '200m medley', time: '3:02.34' },
   { swimmer: 1, competition: 18, discipline: '100m fri', time: '1:15.88' },
+  { swimmer: 1, competition: 347, discipline: '50m bryst', time: '43.10' },
+  { swimmer: 1, competition: 347, discipline: '50m butterfly', time: '37.78' },
+  { swimmer: 1, competition: 348, discipline: '50m fri', time: '31.78' },
+  { swimmer: 1, competition: 348, discipline: '200m medley', time: '3:03.03' },
+  { swimmer: 1, competition: 348, discipline: '100m bryst', time: '1:35.14' },
+  { swimmer: 1, competition: 348, discipline: '100m rygg', time: '1:27.29' },
   //   8888b.     db    88b 88 88 888888 88
   //    8I  Yb   dPYb   88Yb88 88 88__   88
   //    8I  dY  dP__Yb  88 Y88 88 88""   88  .o
