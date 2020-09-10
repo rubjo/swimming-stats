@@ -32,7 +32,7 @@ self.__precacheManifest = [
     "url": "/swimming-stats/index.html"
   },
   {
-    "revision": "b6216d61c03e6ce0c9aea6ca7808f7ca",
+    "revision": "f71d20196d4caf35b6a670db8c70b03d",
     "url": "/swimming-stats/robots.txt"
   }
 ];
