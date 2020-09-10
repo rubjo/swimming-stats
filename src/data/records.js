@@ -41,6 +41,7 @@ export default {
     { poolLength: 25, name: '200m rygg', time: '1:45.63' },
     { poolLength: 25, name: '200m bryst', time: '2:00.16' },
     { poolLength: 25, name: '200m butterfly', time: '1:48.24' },
+    { poolLength: 25, name: '100m medley', time: '50.26' },
     { poolLength: 25, name: '200m medley', time: '1:49.63' },
     { poolLength: 25, name: '400m medley', time: '3:55.50' }
   ]

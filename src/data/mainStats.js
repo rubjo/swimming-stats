@@ -1,8 +1,15 @@
 const swimmers = [
   { id: 1, name: 'Michael', born: '19.03.2009', colour: '#34aeff' },
-  { id: 2, name: 'Daniel', born: '20.05.2011', colour: '#ffbf2b' },
+  { id: 2, name: 'Daniel', born: '20.05.2011', colour: '#ffaf1b' },
   { id: 3, name: 'Victor', born: '11.03.2013', colour: '#00cb10' },
-  { id: 4, name: 'Tomoe', born: '01.06.2000', colour: '#aaaaaa' }
+  { id: 4, name: 'Tomoe Zenimoto Hvas', born: '01.06.2000', colour: '#aaaaaa' },
+  { id: 5, name: 'Kenzo Simons', born: '13.04.2001', colour: '#ff6666' },
+  { id: 6, name: 'Kliment Kolesnikov', born: '09.07.2000', colour: '#ff6666' },
+  { id: 7, name: 'Elijah Winnington', born: '05.05.2000', colour: '#ff6666' },
+  { id: 8, name: 'Nicolò Martinenghi', born: '01.08.1999', colour: '#ff6666' },
+  { id: 9, name: 'Li Zhuhao', born: '09.01.1999', colour: '#ff6666' },
+  { id: 10, name: 'Michael Phelps', born: '30.06.1985', colour: '#ff6666' },
+  { id: 11, name: 'Daiya Seto', born: '24.05.1994', colour: '#ff6666' }
 ]
 
 const venues = [
@@ -76,7 +83,11 @@ const venues = [
   { id: 68, name: 'Buenos Aires', poolLength: 50 },
   { id: 69, name: 'Borås', poolLength: 50 },
   { id: 70, name: 'Gwangju', poolLength: 50 },
-  { id: 71, name: 'Gøteborg', poolLength: 50 }
+  { id: 71, name: 'Gøteborg', poolLength: 50 },
+  { id: 72, name: 'Tilburg', poolLength: 25 },
+  { id: 73, name: 'St. Petersburg', poolLength: 25 },
+  { id: 74, name: 'Melbourne', poolLength: 25 },
+  { id: 75, name: 'Singapore', poolLength: 25 }
 ]
 
 const competitions = [
@@ -427,7 +438,19 @@ const competitions = [
   { id: 345, venue: 50, date: '08.12.2019', name: 'Ukjent stevne' },
   { id: 346, venue: 1, date: '01.02.2020', name: 'Rekruttstevne' },
   { id: 347, venue: 47, date: '08.02.2020', name: 'Asker Open (dag 2)' },
-  { id: 348, venue: 47, date: '08.02.2020', name: 'Asker Open (dag 3)' }
+  { id: 348, venue: 47, date: '08.02.2020', name: 'Asker Open (dag 3)' },
+  { id: 349, venue: 72, date: '22.12.2019', name: 'Dutch Championships' },
+  { id: 350, venue: 73, date: '21.12.2018', name: 'Vladimir Salnikov Cup' },
+  { id: 351, venue: 73, date: '22.12.2017', name: 'Vladimir Salnikov Cup' },
+  { id: 352, venue: 73, date: '23.12.2017', name: 'Vladimir Salnikov Cup' },
+  { id: 353, venue: 74, date: '25.10.2018', name: 'Australian Championships' },
+  { id: 354, venue: 18, date: '16.11.2019', name: 'German Championships' },
+  { id: 355, venue: 46, date: '14.12.2018', name: 'World Championships' },
+  { id: 356, venue: 42, date: '13.12.2017', name: 'European Championships' },
+  { id: 357, venue: 42, date: '16.12.2017', name: 'European Championships' },
+  { id: 358, venue: 75, date: '19.11.2017', name: 'World Cup' },
+  { id: 359, venue: 74, date: '28.11.2003', name: 'FINA World Cup' },
+  { id: 360, venue: 18, date: '22.10.2011', name: 'FINA World Cup' }
 ]
 
 const results = [
@@ -506,6 +529,19 @@ const results = [
   { swimmer: 1, competition: 348, discipline: '200m medley', time: '3:03.03' },
   { swimmer: 1, competition: 348, discipline: '100m bryst', time: '1:35.14' },
   { swimmer: 1, competition: 348, discipline: '100m rygg', time: '1:27.29' },
+  { swimmer: 5, competition: 349, discipline: '50m fri', time: '20.98' },
+  { swimmer: 6, competition: 350, discipline: '100m fri', time: '46.11' },
+  { swimmer: 6, competition: 352, discipline: '200m fri', time: '1:41.75' },
+  { swimmer: 7, competition: 353, discipline: '400m fri', time: '3:39.17' },
+  { swimmer: 6, competition: 355, discipline: '50m rygg', time: '22.77' },
+  { swimmer: 6, competition: 351, discipline: '100m rygg', time: '48.90' },
+  { swimmer: 6, competition: 356, discipline: '200m rygg', time: '1:48.02' },
+  { swimmer: 8, competition: 356, discipline: '50m bryst', time: '26.31' },
+  { swimmer: 8, competition: 357, discipline: '100m bryst', time: '57.27' },
+  { swimmer: 9, competition: 358, discipline: '100m butterfly', time: '49.53' },
+  { swimmer: 10, competition: 359, discipline: '200m butterfly', time: '1:52.27' },
+  { swimmer: 6, competition: 355, discipline: '100m medley', time: '50.63' },
+  { swimmer: 11, competition: 360, discipline: '400m medley', time: '4:02.85' },
   //   8888b.     db    88b 88 88 888888 88
   //    8I  Yb   dPYb   88Yb88 88 88__   88
   //    8I  dY  dP__Yb  88 Y88 88 88""   88  .o
