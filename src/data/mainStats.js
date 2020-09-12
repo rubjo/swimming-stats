@@ -450,7 +450,8 @@ const competitions = [
   { id: 357, venue: 42, date: '16.12.2017', name: 'European Championships' },
   { id: 358, venue: 75, date: '19.11.2017', name: 'World Cup' },
   { id: 359, venue: 74, date: '28.11.2003', name: 'FINA World Cup' },
-  { id: 360, venue: 18, date: '22.10.2011', name: 'FINA World Cup' }
+  { id: 360, venue: 18, date: '22.10.2011', name: 'FINA World Cup' },
+  { id: 361, venue: 7, date: '12.09.2020', name: 'Poseidon Telemark Svøm' }
 ]
 
 const results = [
@@ -529,19 +530,10 @@ const results = [
   { swimmer: 1, competition: 348, discipline: '200m medley', time: '3:03.03' },
   { swimmer: 1, competition: 348, discipline: '100m bryst', time: '1:35.14' },
   { swimmer: 1, competition: 348, discipline: '100m rygg', time: '1:27.29' },
-  { swimmer: 5, competition: 349, discipline: '50m fri', time: '20.98' },
-  { swimmer: 6, competition: 350, discipline: '100m fri', time: '46.11' },
-  { swimmer: 6, competition: 352, discipline: '200m fri', time: '1:41.75' },
-  { swimmer: 7, competition: 353, discipline: '400m fri', time: '3:39.17' },
-  { swimmer: 6, competition: 355, discipline: '50m rygg', time: '22.77' },
-  { swimmer: 6, competition: 351, discipline: '100m rygg', time: '48.90' },
-  { swimmer: 6, competition: 356, discipline: '200m rygg', time: '1:48.02' },
-  { swimmer: 8, competition: 356, discipline: '50m bryst', time: '26.31' },
-  { swimmer: 8, competition: 357, discipline: '100m bryst', time: '57.27' },
-  { swimmer: 9, competition: 358, discipline: '100m butterfly', time: '49.53' },
-  { swimmer: 10, competition: 359, discipline: '200m butterfly', time: '1:52.27' },
-  { swimmer: 6, competition: 355, discipline: '100m medley', time: '50.63' },
-  { swimmer: 11, competition: 360, discipline: '400m medley', time: '4:02.85' },
+  { swimmer: 1, competition: 361, discipline: '400m fri', time: '5:42.64' },
+  { swimmer: 1, competition: 361, discipline: '200m rygg', time: '2:57.48' },
+  { swimmer: 1, competition: 361, discipline: '200m bryst', time: '3:25.07' },
+  { swimmer: 1, competition: 361, discipline: '50m fri', time: '31.11' },
   //   8888b.     db    88b 88 88 888888 88
   //    8I  Yb   dPYb   88Yb88 88 88__   88
   //    8I  dY  dP__Yb  88 Y88 88 88""   88  .o
@@ -617,6 +609,8 @@ const results = [
   { swimmer: 2, competition: 346, discipline: '50m bryst', time: '1:02.48' },
   { swimmer: 2, competition: 346, discipline: '50m rygg', time: '55.32' },
   { swimmer: 2, competition: 346, discipline: '100m fri', time: '1:42.24' },
+  { swimmer: 2, competition: 361, discipline: '50m bryst', time: '58.67' },
+  { swimmer: 2, competition: 361, discipline: '50m fri', time: '40.73' },
   //   Yb    dP 88  dP""b8 888888  dP"Yb  88""Yb
   //    Yb  dP  88 dP   `"   88   dP   Yb 88__dP
   //     YbdP   88 Yb        88   Yb   dP 88"Yb
@@ -1320,7 +1314,24 @@ const results = [
   { swimmer: 4, competition: 343, discipline: '200m medley', time: '1:51.74' },
   { swimmer: 4, competition: 344, discipline: '50m butterfly', time: '22.81' },
   { swimmer: 4, competition: 344, discipline: '100m medley', time: '52.00' },
-  { swimmer: 4, competition: 345, discipline: '100m medley', time: '52.39' }
+  { swimmer: 4, competition: 345, discipline: '100m medley', time: '52.39' },
+  //    dP"Yb  888888 88  88 888888 88""Yb .dP"Y8
+  //   dP   Yb   88   88  88 88__   88__dP `Ybo."
+  //   Yb   dP   88   888888 88""   88"Yb  o.`Y8b
+  //    YbodP    88   88  88 888888 88  Yb 8bodP'
+  { swimmer: 5, competition: 349, discipline: '50m fri', time: '20.98' },
+  { swimmer: 6, competition: 350, discipline: '100m fri', time: '46.11' },
+  { swimmer: 6, competition: 352, discipline: '200m fri', time: '1:41.75' },
+  { swimmer: 7, competition: 353, discipline: '400m fri', time: '3:39.17' },
+  { swimmer: 6, competition: 355, discipline: '50m rygg', time: '22.77' },
+  { swimmer: 6, competition: 351, discipline: '100m rygg', time: '48.90' },
+  { swimmer: 6, competition: 356, discipline: '200m rygg', time: '1:48.02' },
+  { swimmer: 8, competition: 356, discipline: '50m bryst', time: '26.31' },
+  { swimmer: 8, competition: 357, discipline: '100m bryst', time: '57.27' },
+  { swimmer: 9, competition: 358, discipline: '100m butterfly', time: '49.53' },
+  { swimmer: 10, competition: 359, discipline: '200m butterfly', time: '1:52.27' },
+  { swimmer: 6, competition: 355, discipline: '100m medley', time: '50.63' },
+  { swimmer: 11, competition: 360, discipline: '400m medley', time: '4:02.85' }
 ]
 
 export { swimmers, venues, competitions, results }
