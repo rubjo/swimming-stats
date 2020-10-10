@@ -87,7 +87,8 @@ const venues = [
   { id: 72, name: 'Tilburg', poolLength: 25 },
   { id: 73, name: 'St. Petersburg', poolLength: 25 },
   { id: 74, name: 'Melbourne', poolLength: 25 },
-  { id: 75, name: 'Singapore', poolLength: 25 }
+  { id: 75, name: 'Singapore', poolLength: 25 },
+  { id: 76, name: 'Kongsberg', poolLength: 25 }
 ]
 
 const competitions = [
@@ -451,7 +452,8 @@ const competitions = [
   { id: 358, venue: 75, date: '19.11.2017', name: 'World Cup' },
   { id: 359, venue: 74, date: '28.11.2003', name: 'FINA World Cup' },
   { id: 360, venue: 18, date: '22.10.2011', name: 'FINA World Cup' },
-  { id: 361, venue: 7, date: '12.09.2020', name: 'Poseidon Telemark Svøm' }
+  { id: 361, venue: 7, date: '12.09.2020', name: 'Poseidon Telemark Svøm' },
+  { id: 362, venue: 76, date: '10.10.2020', name: 'Bergmannsvøm' }
 ]
 
 const results = [
@@ -534,6 +536,10 @@ const results = [
   { swimmer: 1, competition: 361, discipline: '200m rygg', time: '2:57.48' },
   { swimmer: 1, competition: 361, discipline: '200m bryst', time: '3:25.07' },
   { swimmer: 1, competition: 361, discipline: '50m fri', time: '31.11' },
+  { swimmer: 1, competition: 362, discipline: '100m fri', time: '1:09.92' },
+  { swimmer: 1, competition: 362, discipline: '100m butterfly', time: '1:21.21' },
+  { swimmer: 1, competition: 362, discipline: '50m butterfly', time: '35.47' },
+  { swimmer: 1, competition: 362, discipline: '200m medley', time: '2:51.55' },
   //   8888b.     db    88b 88 88 888888 88
   //    8I  Yb   dPYb   88Yb88 88 88__   88
   //    8I  dY  dP__Yb  88 Y88 88 88""   88  .o
@@ -611,6 +617,8 @@ const results = [
   { swimmer: 2, competition: 346, discipline: '100m fri', time: '1:42.24' },
   { swimmer: 2, competition: 361, discipline: '50m bryst', time: '58.67' },
   { swimmer: 2, competition: 361, discipline: '50m fri', time: '40.73' },
+  { swimmer: 2, competition: 362, discipline: '50m fri', time: '39.61' },
+  { swimmer: 2, competition: 362, discipline: '50m bryst', time: '1:00.37' },
   //   Yb    dP 88  dP""b8 888888  dP"Yb  88""Yb
   //    Yb  dP  88 dP   `"   88   dP   Yb 88__dP
   //     YbdP   88 Yb        88   Yb   dP 88"Yb
