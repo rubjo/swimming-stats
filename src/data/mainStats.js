@@ -156,7 +156,7 @@ const competitions = [
   { id: 62, venue: 71, date: '28.04.2012', name: 'Ukjent stevne' },
   { id: 63, venue: 71, date: '29.04.2012', name: 'Ukjent stevne' },
   { id: 64, venue: 15, date: '29.04.2012', name: 'Ukjent stevne' },
-  { id: 65, venue: 71, date: '30.04.2012', name: 'Ukjent stevne' },
+  { id: 65, venue: 15, date: '30.04.2012', name: 'Ukjent stevne' },
   { id: 66, venue: 15, date: '30.04.2012', name: 'Ukjent stevne' },
   { id: 67, venue: 9, date: '03.11.2012', name: 'Ukjent stevne' },
   { id: 68, venue: 10, date: '13.10.2012', name: 'Ukjent stevne' },
