@@ -4,12 +4,12 @@ self.__precacheManifest = [
     "url": "/swimming-stats/js/about.793c794d.js"
   },
   {
-    "revision": "704806c0c28dc061f1e7",
+    "revision": "f9142f8ce3eb9a473a29",
     "url": "/swimming-stats/css/app.7354425e.css"
   },
   {
-    "revision": "704806c0c28dc061f1e7",
-    "url": "/swimming-stats/js/app.e94fa870.js"
+    "revision": "f9142f8ce3eb9a473a29",
+    "url": "/swimming-stats/js/app.3ccae281.js"
   },
   {
     "revision": "9c995256af5c5d07da4e",
@@ -28,7 +28,7 @@ self.__precacheManifest = [
     "url": "/swimming-stats/fonts/element-icons.732389de.ttf"
   },
   {
-    "revision": "ba37b125a1a91f32c5a708e07ec6cd66",
+    "revision": "d5bc940744a4751fa4f9e9578b85e4d4",
     "url": "/swimming-stats/index.html"
   },
   {
