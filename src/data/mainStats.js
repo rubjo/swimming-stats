@@ -453,7 +453,9 @@ const competitions = [
   { id: 359, venue: 74, date: '28.11.2003', name: 'FINA World Cup' },
   { id: 360, venue: 18, date: '22.10.2011', name: 'FINA World Cup' },
   { id: 361, venue: 7, date: '12.09.2020', name: 'Poseidon Telemark Svøm' },
-  { id: 362, venue: 76, date: '10.10.2020', name: 'Bergmannsvøm' }
+  { id: 362, venue: 76, date: '10.10.2020', name: 'Bergmannsvøm' },
+  { id: 363, venue: 4, date: '24.10.2020', name: 'Slottsfjell open, dag 1' }
+  { id: 364, venue: 4, date: '25.10.2020', name: 'Slottsfjell open, dag 2' }
 ]
 
 const results = [
@@ -540,6 +542,12 @@ const results = [
   { swimmer: 1, competition: 362, discipline: '100m butterfly', time: '1:21.21' },
   { swimmer: 1, competition: 362, discipline: '50m butterfly', time: '35.47' },
   { swimmer: 1, competition: 362, discipline: '200m medley', time: '2:51.55' },
+  { swimmer: 1, competition: 363, discipline: '400m fri', time: '5:34.63' },
+  { swimmer: 1, competition: 363, discipline: '50m rygg', time: '39.31' },
+  { swimmer: 1, competition: 363, discipline: '50m bryst', time: '42.09' },
+  { swimmer: 1, competition: 364, discipline: '200m bryst', time: '3:13.12' },
+  { swimmer: 1, competition: 364, discipline: '200m rygg', time: '2:53.01' },
+  { swimmer: 1, competition: 364, discipline: '50m fri', time: '30.41' },
   //   8888b.     db    88b 88 88 888888 88
   //    8I  Yb   dPYb   88Yb88 88 88__   88
   //    8I  dY  dP__Yb  88 Y88 88 88""   88  .o
@@ -619,6 +627,10 @@ const results = [
   { swimmer: 2, competition: 361, discipline: '50m fri', time: '40.73' },
   { swimmer: 2, competition: 362, discipline: '50m fri', time: '39.61' },
   { swimmer: 2, competition: 362, discipline: '50m bryst', time: '1:00.37' },
+  { swimmer: 2, competition: 363, discipline: '50m bryst', time: '57.05' },
+  { swimmer: 2, competition: 363, discipline: '50m rygg', time: '48.62' },
+  { swimmer: 2, competition: 364, discipline: '50m fri', time: '40.40' },
+  { swimmer: 2, competition: 364, discipline: '50m butterfly', time: '50.39' },
   //   Yb    dP 88  dP""b8 888888  dP"Yb  88""Yb
   //    Yb  dP  88 dP   `"   88   dP   Yb 88__dP
   //     YbdP   88 Yb        88   Yb   dP 88"Yb
