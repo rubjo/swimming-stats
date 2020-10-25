@@ -454,7 +454,7 @@ const competitions = [
   { id: 360, venue: 18, date: '22.10.2011', name: 'FINA World Cup' },
   { id: 361, venue: 7, date: '12.09.2020', name: 'Poseidon Telemark Svøm' },
   { id: 362, venue: 76, date: '10.10.2020', name: 'Bergmannsvøm' },
-  { id: 363, venue: 4, date: '24.10.2020', name: 'Slottsfjell open, dag 1' }
+  { id: 363, venue: 4, date: '24.10.2020', name: 'Slottsfjell open, dag 1' },
   { id: 364, venue: 4, date: '25.10.2020', name: 'Slottsfjell open, dag 2' }
 ]
 
