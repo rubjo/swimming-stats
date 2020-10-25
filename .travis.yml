@@ -1,18 +1,23 @@
 language: node_js
 
+dist: xenial
+
+os: linux
+
 node_js:
-  - "13"
+  - "14"
 
 install:
   - npm install
   - npm run build
 
 deploy:
+  strategy: git
   local_dir: dist
   provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
-  keep_history: true
+  cleanup: false
+  token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep_history: false
   on:
     branch: master
 
