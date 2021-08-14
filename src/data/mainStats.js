@@ -455,7 +455,9 @@ const competitions = [
   { id: 361, venue: 7, date: '12.09.2020', name: 'Poseidon Telemark Svøm' },
   { id: 362, venue: 76, date: '10.10.2020', name: 'Bergmannsvøm' },
   { id: 363, venue: 4, date: '24.10.2020', name: 'Slottsfjell open, dag 1' },
-  { id: 364, venue: 4, date: '25.10.2020', name: 'Slottsfjell open, dag 2' }
+  { id: 364, venue: 4, date: '25.10.2020', name: 'Slottsfjell open, dag 2' },
+  { id: 365, venue: 54, date: '14.08.2021', name: 'Aquarama 2021, dag 1' },
+  { id: 366, venue: 54, date: '14.08.2021', name: 'Aquarama 2021, dag 2' }
 ]
 
 const results = [
@@ -548,6 +550,8 @@ const results = [
   { swimmer: 1, competition: 364, discipline: '200m bryst', time: '3:13.12' },
   { swimmer: 1, competition: 364, discipline: '200m rygg', time: '2:53.01' },
   { swimmer: 1, competition: 364, discipline: '50m fri', time: '30.41' },
+  { swimmer: 1, competition: 365, discipline: '200m bryst', time: '2:51.53' },
+  { swimmer: 1, competition: 365, discipline: '400m fri', time: '5:06.04' },
   //   8888b.     db    88b 88 88 888888 88
   //    8I  Yb   dPYb   88Yb88 88 88__   88
   //    8I  dY  dP__Yb  88 Y88 88 88""   88  .o
