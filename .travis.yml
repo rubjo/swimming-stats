@@ -12,12 +12,10 @@ install:
   - npm run build
 
 deploy:
-  strategy: git
-  local_dir: dist
   provider: pages
-  cleanup: false
-  token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
-  keep_history: false
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep_history: true
   on:
     branch: master
 
