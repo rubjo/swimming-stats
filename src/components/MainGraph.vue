@@ -194,7 +194,7 @@ export default {
       }).then(result => {
         this.chart = result.view
         window.chart = this.chart
-      }).catch(console.error)
+      })
     },
     destroyChart () {
       this.chart.finalize()
