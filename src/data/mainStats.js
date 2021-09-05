@@ -457,7 +457,10 @@ const competitions = [
   { id: 363, venue: 4, date: '24.10.2020', name: 'Slottsfjell open, dag 1' },
   { id: 364, venue: 4, date: '25.10.2020', name: 'Slottsfjell open, dag 2' },
   { id: 365, venue: 21, date: '14.08.2021', name: 'Aquarama 2021, dag 1' },
-  { id: 366, venue: 21, date: '14.08.2021', name: 'Aquarama 2021, dag 2' }
+  { id: 366, venue: 21, date: '14.08.2021', name: 'Aquarama 2021, dag 2' },
+  { id: 367, venue: 76, date: '03.09.2021', name: 'LÅMØ sør 2021, dag 1' },
+  { id: 368, venue: 76, date: '04.09.2021', name: 'LÅMØ sør 2021, dag 2' },
+  { id: 369, venue: 76, date: '05.09.2021', name: 'LÅMØ sør 2021, dag 3' }
 ]
 
 const results = [
@@ -556,6 +559,11 @@ const results = [
   { swimmer: 1, competition: 366, discipline: '200m rygg', time: '2:38.40' },
   { swimmer: 1, competition: 366, discipline: '200m medley', time: '2:35.63' },
   { swimmer: 1, competition: 366, discipline: '100m butterfly', time: '1:14.73' },
+  { swimmer: 1, competition: 367, discipline: '100m butterfly', time: '1:11.71' },
+  { swimmer: 1, competition: 368, discipline: '400m fri', time: '4:56.79' },
+  { swimmer: 1, competition: 368, discipline: '200m bryst', time: '2:50.41' },
+  { swimmer: 1, competition: 369, discipline: '200m rygg', time: '2:33.80' },
+  { swimmer: 1, competition: 369, discipline: '200m medley', time: '2:29.71' },
   //   8888b.     db    88b 88 88 888888 88
   //    8I  Yb   dPYb   88Yb88 88 88__   88
   //    8I  dY  dP__Yb  88 Y88 88 88""   88  .o
