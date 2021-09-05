@@ -1,22 +1,22 @@
 self.__precacheManifest = [
   {
-    "revision": "b42395ab93eacb3a9d48",
-    "url": "/swimming-stats/js/about.3ebf234b.js"
+    "revision": "bed9efe3115ae2b22f12",
+    "url": "/swimming-stats/js/about.509cf9f9.js"
   },
   {
-    "revision": "a98190405b2029db8897",
+    "revision": "bb7190c08036de92937c",
     "url": "/swimming-stats/css/app.ece7c34c.css"
   },
   {
-    "revision": "a98190405b2029db8897",
-    "url": "/swimming-stats/js/app.1ca90860.js"
+    "revision": "bb7190c08036de92937c",
+    "url": "/swimming-stats/js/app.43480852.js"
   },
   {
-    "revision": "38a381a35066f5e29307",
-    "url": "/swimming-stats/css/chunk-vendors.d6c0cb77.css"
+    "revision": "0511b34733340e08f78b",
+    "url": "/swimming-stats/css/chunk-vendors.e2d411b7.css"
   },
   {
-    "revision": "38a381a35066f5e29307",
+    "revision": "0511b34733340e08f78b",
     "url": "/swimming-stats/js/chunk-vendors.5c3bd9c5.js"
   },
   {
@@ -28,7 +28,7 @@ self.__precacheManifest = [
     "url": "/swimming-stats/fonts/element-icons.732389de.ttf"
   },
   {
-    "revision": "71eb944b27a46b2bf138740cce6f2913",
+    "revision": "f0eb7e01dc5bbc1bd67a0d0a1d09f4f9",
     "url": "/swimming-stats/index.html"
   },
   {
